@@ -17,7 +17,8 @@ class GunTypeFragment : Fragment() {
     override fun onCreate( savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) { // Get back arguments
-            if (getArguments()!= null) position = getArguments()!!.getInt("position", 0)
+            if (getArguments() != null)
+            {position = getArguments()!!.getInt("position", 0)}
         }
     }
 

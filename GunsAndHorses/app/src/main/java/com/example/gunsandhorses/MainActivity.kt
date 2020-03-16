@@ -2,11 +2,12 @@ package com.example.gunsandhorses
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity(),GunFragment.OnItemSelectedListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,19 +19,44 @@ class MainActivity : AppCompatActivity() {
         ft.add(R.id.flContainer, firstFragment)
         ft.commit()
 }
-    fun onGunSelected(position: Int) {
-        Toast.makeText(this, "Called By Fragment A: position - $position", Toast.LENGTH_SHORT).show()
+        if (resources.configuration.orientation === Configuration.ORIENTATION_LANDSCAPE) {
+            val secondFragment = GunTypeFragment()
+            val args = Bundle()
+            args.putInt("position", 0)
+            secondFragment.setArguments(args)
+            val ft2 =
+                supportFragmentManager.beginTransaction()
+            ft2.add(R.id.flContainer2, secondFragment)
+            ft2.commit()
+        }    }
+    override fun onGunSelected(position: Int) {
         val secondFragment = GunTypeFragment()
         val args = Bundle()
         args.putInt("position", position)
-        secondFragment.setArguments(args)
+        secondFragment.arguments = args
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.flContainer, secondFragment)
+            .addToBackStack(null)
+            .commit()
+        if (resources.configuration.orientation === Configuration.ORIENTATION_LANDSCAPE) {
             supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.flContainer, secondFragment)
-                    .addToBackStack(null)
-                    .commit()
-        }
-    }
+                .beginTransaction()
+                .replace(R.id.flContainer2, secondFragment)
+                .commit()
+        } else {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flContainer, secondFragment)
+                .addToBackStack(null)
+                .commit()
+        }}
+
+
+
+
+
 }
+
 
 

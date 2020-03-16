@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WarApp</string>
+    <string name="guns">Guns</string>
+    <string name="weapons_details">Weapons Details</string>
+    <string name="Gun_Selection">Guns</string>
+    <string name="Horse_selection">Horses</string>
+    <string name="Gun1">MK20_gun</string>
+    <string name="Gun2">MK20_SSR_gun</string>
+    <string name="Gun3">SCAR_H_gun</string>
+    <string name="select_button">Select</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="about_gun1">The Mk 20 Mod 0 was a 40mm automatic grenade launcher manufactured by NOS Louisville and was used by the US Navy during the Vietnam War. It used the Blow-Forward operation that was previously used on semi-automatic pistols such as the Steyr Mannlicher M1894 and Schwarzlose Model 1908</string>
+    <string name="about_gun2">MK 20 SSR, the FN SCAR® Sniper Support Rifle (SSR) is a tailored design for long-range precision fire applications while also providing capability to fight close in. Based on the FN® MK 17, the SSR is capable of sub-minute of angle accuracy out to and beyond 1,000 yards.</string>
+    <string name="about_gun3">The FN SCAR (Special Operations Forces Combat Assault Rifle) is a gas-operated (short-stroke gas piston) self-loading Assault/Battle rifle with a rotating bolt.</string>
+    <string name="Horse_1">BelgianHorse</string>
+    <string name="Horse_2">MedievalHorse</string>
+    <string name="Horse_3">MarwariHorse</string>
+    <string name="about_horse1">Belgian horse, breed of heavy draft horse descended from the Flemish “great horse,” the medieval battle horse native to the Low Countries.</string>
+    <string name="about_horse2">The most well-known horse of the medieval era of Europe is the destrier, known for carrying knights into war. However, most knights and mounted men-at-arms rode smaller horses known as coursers and rounceys</string>
+    <string name="about_horse3">The Marwari Horse is a breed of royal historic horses that were created in India and showed their skills as war horses for centuries</string>
+</resources>

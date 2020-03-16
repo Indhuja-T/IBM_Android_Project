@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -34,9 +35,16 @@ class GunFragment : Fragment() {
             view.findViewById<View>(R.id.lvItems) as ListView
         lvItems.adapter = itemsAdapter
         lvItems.onItemClickListener =
-            OnItemClickListener { parent, view, position, id ->
-                listener?.onGunSelected(position)
+            object:OnItemClickListener {
+                override fun onItemClick(parent:AdapterView<*>?, view:View, position:Int, id:Long){
+                    if(listener!==null){
+                listener?.onGunSelected(position)}
+                    else {
+                        listener?.onGunSelected(position)
+                    }
             }
+    }
+
     }
 
     private var listener: OnItemSelectedListener? = null

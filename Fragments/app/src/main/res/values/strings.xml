@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="edit_text_hint">Edit</string>
+    <string name="fragment_one_title">Fragment_One</string>
+    <string name="fragment_two_title">Fragment_two</string>
 </resources>
